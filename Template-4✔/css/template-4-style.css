@@ -255,6 +255,33 @@ a {
   margin-right: 10px;
 }
 /* end header */
+#scroll-top {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  animation: to-up 1.5s linear infinite;
+}
+@media (max-width: 997px) {
+  #scroll-top {
+    right: -100px;
+  }
+
+}
+#scroll-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--section-background);
+  font-size: 20px;
+}
 /* start landing  */
 .landing {
   position: relative;
@@ -278,7 +305,7 @@ a {
   padding-bottom: 120px;
 }
 .landing .text {
-
+  text-align: center;
   flex: 1;
 }
 @media (max-width: 991px) {
@@ -827,6 +854,7 @@ a {
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: width 0.5s linear;
 }
 /* end skills */
 /* start work steps */
@@ -941,7 +969,7 @@ a {
 }
 .events .info .time .unit span:first-child {
   font-size: 35px;
-  padding: 15px;
+  padding: 15px 7px;
   color: var(--main-color);
   font-weight: bold;
 }
@@ -1275,6 +1303,7 @@ a {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: count 0.5s linear;
 }
 .stats .box .text {
   color: var(--main-color);
@@ -1500,6 +1529,17 @@ a {
 }
 /* end footer  */
 /* start animation */
+@keyframes to-up {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 10px;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
 @keyframes up-down {
   0%,
   100% {

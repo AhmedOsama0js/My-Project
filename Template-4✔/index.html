@@ -41,52 +41,52 @@
               </div>
               <ul class="links">
                 <li>
-                  <a href="#"
+                  <a href="#testimonials"
                     ><i class="fa-solid fa-comments"> </i>Testimonials
                   </a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#team"
                     ><i class="fa-regular fa-user"></i> Team Members</a
                   >
                 </li>
                 <li>
-                  <a href="#"><i class="fa-solid fa-building"></i> Services</a>
+                  <a href="#services"><i class="fa-solid fa-building"></i> Services</a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#our-skills"
                     ><i class="fa-regular fa-circle-check"></i> Our Skills</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#work-steps"
                     ><i class="fa-regular fa-clipboard"></i> How It Works</a
                   >
                 </li>
               </ul>
               <ul class="links">
                 <li>
-                  <a href="#"
+                  <a href="#events"
                     ><i class="fa-regular fa-calendar-days"></i> Events</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#pricing"
                     ><i class="fa-solid fa-server"></i> Pricing plans</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#videos"
                     ><i class="fa-regular fa-circle-play"></i> Top Videos</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#stats"
                     ><i class="fa-solid fa-chart-column"></i> Status</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#discount"
                     ><i class="fa-solid fa-percent"></i> Request A Discount
                   </a>
                 </li>
@@ -98,6 +98,9 @@
       </div>
     </div>
     <!-- end header  -->
+
+      <span id="scroll-top" onclick="scrollToTop()"style="display:none;" ><i class="fa-solid fa-arrow-up"></i></span>
+  
     <!-- start landing   -->
     <div class="landing">
       <div class="container">
@@ -667,25 +670,25 @@
           <div class="skill">
             <h3>Html <span>80%</span></h3>
             <div class="the-progress">
-              <span style="width: 80%"></span>
+              <span id="minS" style="width: 0" data-width="80%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>CSS <span>70%</span></h3>
             <div class="the-progress">
-              <span style="width: 70%"></span>
+              <span id="minS" style="width: 0"data-width="70%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>JavaScript <span>60%</span></h3>
             <div class="the-progress">
-              <span style="width: 60%"></span>
+              <span  id="minS" style="width: 0" data-width="60%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>Python <span>20%</span></h3>
             <div class="the-progress">
-              <span style="width: 20%"></span>
+              <span id="minS" style="width: 0" data-width="20%"></span>
             </div>
           </div>
         </div>
@@ -737,23 +740,23 @@
     <div class="events" id="events">
       <h2 class="main-title">Events</h2>
       <div class="container">
-        <img src="/images/events.png" alt="" />
+        <img src="images/events.png" alt="" />
         <div class="info">
           <div class="time">
             <div class="unit">
-              <span>15</span>
+              <span id="event-days">0</span>
               <span>Days</span>
             </div>
             <div class="unit">
-              <span>20</span>
+              <span id="event-hours">0</span>
               <span>Hours</span>
             </div>
             <div class="unit">
-              <span>45</span>
+              <span id="event-minutes">0</span>
               <span>Minutes</span>
             </div>
             <div class="unit">
-              <span>55</span>
+              <span id="event-seconds">0</span>
               <span>Seconds</span>
             </div>
           </div>
@@ -863,22 +866,22 @@
       <div class="container">
         <div class="box">
           <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number">300</span>
+          <span id="num"  class="number" data-goal="100">0</span>
           <span class="text">clients</span>
         </div>
         <div class="box">
           <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number">400</span>
+          <span id="num" class="number" data-goal="500">0</span>
           <span class="text">projects</span>
         </div>
         <div class="box">
           <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number">12</span>
+          <span id="num" class="number" data-goal="13">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number">500</span>
+          <span id="num" class="number" data-goal="300">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -999,5 +1002,6 @@
       <p class="copyright">Made with &lt;3 Elzero</p>
     </div>
     <!-- end footer -->
+    <script src="js/main.js"></script>
   </body>
 </html>
