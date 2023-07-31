@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2122;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  margin: auto;
+  padding: 30px;
+  gap: 20px;
+  width: 80%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 776px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.container .img {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.img img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+@media (max-width: 776px) {
+  .img img {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.img img .img-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .img .upload input {
+  display: none;
+}
+.container .img .upload label {
+  padding: 10px 20px;
+  border: 2px dotted white;
+  border-radius: 10px;
+  color: #eee;
+  cursor: pointer;
+}
+
+.container .filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 40px;
+  width: 80%;
+}
+.container .filters h3 {
+  font-size: 40px;
+  color: #eee;
+}
+.container .filters .filter-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container .filters .filter-box ul li {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.container .filters .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container .filters .buttons button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.container .filters .buttons button:hover {
+  background-color: rgb(23, 73, 23);
+  color: white;
+}
