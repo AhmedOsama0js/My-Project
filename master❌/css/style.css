@@ -72,6 +72,7 @@ body::after {
   border: 5px solid #eeeeee50;
   box-shadow: -5px -5px 10px #cccccc4d;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .box .img {
