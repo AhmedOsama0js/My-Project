@@ -1,5 +1,8 @@
 let allCard = document.querySelectorAll(".card");
 
+let clicked = document.querySelector(".clicked");
+let right = document.querySelector(".right");
+
 let nam = document.querySelector(".name");
 
 let input1 = document.querySelector(".box input");
@@ -40,15 +43,16 @@ function isFlip() {
     card1 = null;
     card2 = null;
     score++;
+    right.play();
     count.innerHTML = `${score} / 10`;
     if (score === 10) gameOver();
   } else if (img1 && img2) {
+    clicked.play();
     canClick = false;
 
     setTimeout(() => {
       card1.classList.remove("flip");
       card2.classList.remove("flip");
-
       card1 = null;
       card2 = null;
       canClick = true;
@@ -59,7 +63,7 @@ function isFlip() {
 function gameOver() {
   setTimeout(() => {
     win.style.transform = "translateY(0)";
-    butn.textContent = "Play😍Agin";
+    butn.textContent = "Play😍Again";
     h3.textContent = "🤝Congratulations🤝";
     input1.classList.add("hid");
     input1 = "";
@@ -81,7 +85,7 @@ let started = () => {
   h3.textContent = "inter your name";
 
   butn.textContent = "start";
-  butn.style.fontSize = `20px`
+  butn.style.fontSize = `20px`;
 
   butn.addEventListener("click", () => {
     nam.innerHTML = `Hello : ${input1.value}`;
