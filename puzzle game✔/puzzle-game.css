@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  font-family: "Cairo", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.game-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.game-box .box-c {
+  background-color: #eee;
+  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  gap: 30px;
+  z-index: -100;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 2px;
+}
+.img-box.active {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.img-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.img-box span:hover {
+  background-color: #ccc;
+}
+
+.game-box .box-c span {
+  width: 60px;
+  height: 80px;
+  background-color: white;
+}
+
+.canvas-container {
+  background-color: #eee;
+  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+canvas#is-drag {
+  outline: 1px solid red;
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.336);
+  z-index: 1000;
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+.navigation .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.navigation .box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 5px 0;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.navigation .box span:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  user-select: none;
+}
+
+.button span {
+  width: fit-content;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  cursor: pointer;
+  font-size: 20px;
+}
+.button span:hover {
+  background-color: #ccc;
+}

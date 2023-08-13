@@ -147,6 +147,7 @@ body {
   transition: all 0.5s ease;
 }
 
+
 .is-done {
   text-decoration: line-through;
   opacity: 0.5;
