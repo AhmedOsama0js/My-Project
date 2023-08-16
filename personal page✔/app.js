@@ -23,7 +23,6 @@ let work = document.querySelector("#work");
 
 let navLi = [...document.querySelectorAll("nav ul li a i")];
 
-
 window.addEventListener("scroll", () => {
   navLi.forEach((link) => {
     link.classList.remove("active");
@@ -129,3 +128,20 @@ closeRandom.forEach((color) => {
     }
   });
 });
+
+let nav = document.querySelector("nav");
+let now = window.scrollY;
+
+function toggleElementVisibility() {
+  let scrollPosition = window.scrollY;
+
+  if (scrollPosition < now) {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+
+  now = scrollPosition;
+}
+
+window.addEventListener("scroll", toggleElementVisibility);
