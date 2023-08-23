@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- datatables css fill-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+
+    <!-- font awesome css (cdn) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- bootstrap css (cdn) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+    />
+    <!-- main style css fill -->
+    <link rel="stylesheet" href="css/curd.css" />
+
+    <title>CURD Operation</title>
+  </head>
+  <body>
+    <!-- container start -->
+    <div class="container p-3">
+      <div class="row bg-primary rounded">
+        <div class="text-light p-3 text-center col-12">
+          <h1>CURD Operation</h1>
+        </div>
+      </div>
+      <!-- start category -->
+      <div class="row bg-secondary p-3 rounded mt-2 text-light">
+        <div class="col-md-6">
+          <label class="p-2" id="lbcateg">Category : *</label>
+          <select
+            title="selc"
+            id="ddlcategory"
+            class="form-select text-secondary text-center"
+          ></select>
+        </div>
+        <div class="col-md-6">
+          <label class="p-2" id="lbInputCategory">Category Name : *</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control w-70 rounded"
+              placeholder="Enter Name Category"
+              id="category"
+            />
+            <div class="form-group ms-1">
+              <button
+                onclick="saveCategory()"
+                title="btn"
+                type="button"
+                class="btn btn-primary"
+              >
+                <i class="fa-solid fa-floppy-disk"></i>
+              </button>
+              <button
+                type="button"
+                title="btn"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end category -->
+
+      <!--start product -->
+      <div class="row bg-secondary mt-1 rounded p-3 text-light">
+        <div class="col-md-4">
+          <label class="p-2" id="lbPro" for="lbPro">Product Name : *</label>
+          <input
+            type="text"
+            id="product"
+            class="form-control"
+            placeholder="Enter Product Name"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label class="p-2" id="lbQun" for="lbQun">Quantity:*</label>
+          <input onkeyup="GetTotal()" onchange="GetTotal()"
+            title="input"
+            type="number"
+            class="form-control text-center"
+            value="0"
+            id="quantity"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label class="p-2" id="lbPrice" for="lbPrice">Price : *</label>
+          <input  onkeyup="GetTotal()" onchange="GetTotal()"
+            title="input"
+            type="number"
+            class="form-control text-center"
+            value="0"
+            id="Price"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label class="p-2" for="lbdiscount">Discount</label>
+          <input onkeyup="GetTotal()" onchange="GetTotal()"
+            title="discount"
+            type="number"
+            class="form-control text-center"
+            value="0"
+            id="discount"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label class="p-2" for="lbdiscount">Total</label>
+          <input  onchange="GetTotal()"
+            title="input"
+            type="number"
+            class="form-control text-center bg-danger"
+            value="0"
+            id="total"
+            disabled
+          />
+        </div>
+
+        <div class="text-center col-md-12 mt-3">
+          <div class="btn btn-primary w-25 me-2" onclick=" validationProductFromTable()" id="save-btn-product">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <div class="btn btn-danger w-25 ms-2" onclick="resetProduct()">
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </div>
+      </div>
+      <!--end product -->
+      <!--start table -->
+      <div class="row bg-secondary mt-1 rounded p-3 text-light">
+        <div class="container overflow-auto">
+          <table class="table table-striped p-2 table-responsive" id="tablePro">
+            <thead class="text-center fs-5">
+              <td class="col-1">ID</td>
+              <td class="col-2 border-start">Category</td>
+              <td class="col-1 border-start">Product</td>
+              <td class="col-1 border-start">Quantity</td>
+              <td class="col-2 border-start">Price</td>
+              <td class="col-1 border-start">Discount</td>
+              <td class="col-2 border-start">Total</td>
+              <td class="col-2 border-start">Events</td>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--end table -->
+    </div>
+    <!-- container end -->
+
+    <!--start Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center w-100" id="exampleModalLabel">
+              Category <span id="counter-Category"></span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container overflow-auto">
+              <table
+                class="table table-striped p-2 table-responsive"
+                id="tablePro"
+              >
+                <thead class="text-center border mb-1  fs-5">
+                  <td class=" border" >ID</td>
+                  <td class=" border">Product</td>
+                  <td class="border">Events</td>
+                </thead>
+                <tbody class="border" id="showTableCategory">
+                  <tr class="text-center">
+                    <td>1</td>
+                    <td>dell</td>
+                    <td>
+                      <button
+                        class="btn btn-primary"
+                        type="button"
+                        title="edit"
+                      >
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button class="btn btn-danger" type="button" title="edit">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td>1</td>
+                    <td>dell</td>
+                    <td>
+                      <button
+                        class="btn btn-primary"
+                        type="button"
+                        title="edit"
+                      >
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button class="btn btn-danger" type="button" title="edit">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td>1</td>
+                    <td>dell</td>
+                    <td>
+                      <button
+                        class="btn btn-primary"
+                        type="button"
+                        title="edit"
+                      >
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button class="btn btn-danger" type="button" title="edit">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end Modal -->
+    <!-- data Tables fill  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- bootstrap js fill (cdn)  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    <!-- main js fill  -->
+    <script src="js/curd.js"></script>
+  </body>
+</html>
