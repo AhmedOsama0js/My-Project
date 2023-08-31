@@ -17,7 +17,6 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 ::-webkit-scrollbar {
   background-color: var(--section-bg-color);
@@ -39,7 +38,7 @@ a {
 body {
   background-color: var(--white-color);
   font-family: "Noto Sans", sans-serif;
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
   /* height: 50000px; */
 }
 
@@ -130,19 +129,19 @@ nav .container > a {
 
 /* end home */
 /* start about */
-.about .text-box{
+.about .text-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.about .text-box .text{
+.about .text-box .text {
   width: 50%;
 }
-@media(max-width:992px){
-  .about .text-box .text{
+@media (max-width: 992px) {
+  .about .text-box .text {
     width: 100%;
   }
-  .about .text-box{
+  .about .text-box {
     flex-direction: column;
   }
 }
@@ -157,36 +156,34 @@ nav .container > a {
   border: 1px solid #eee;
   box-shadow: -20px 18px 20px 10px #eee, inset -4px 6px 20px 4px #eee;
 }
-@media(max-width:992px){
- .about .num .data-box {
+@media (max-width: 992px) {
+  .about .num .data-box {
     margin-top: 30px;
-   width: 300px;
-   height: 300px;
+    width: 300px;
+    height: 300px;
   }
 }
 
-.about .num .data-box h1{
- font-size: 8rem;
+.about .num .data-box h1 {
+  font-size: 8rem;
   color: var(--primary-color);
   font-weight: bold;
-
 }
-.about .num .data-box h1 span{
+.about .num .data-box h1 span {
   font-size: 20px;
   color: var(--p-color);
 }
-.about .num .data-box p{
-    font-size: 20px;
+.about .num .data-box p {
+  font-size: 20px;
   color: var(--p-color);
   font-weight: bold;
 }
 /* end about */
 /*start  Our Timeline  */
-.our-timeline .box{
+.our-timeline .box {
   margin-bottom: 20px;
-  
 }
-.our-timeline .box .icon{
+.our-timeline .box .icon {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -194,7 +191,7 @@ nav .container > a {
   box-shadow: inset -3px 4px 6px 1px #eee, inset 1px -8px 6px 1px #eee;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   font-size: 30px;
   margin: 0 10px;
   position: relative;
@@ -203,7 +200,7 @@ nav .container > a {
   content: "";
   position: absolute;
   width: 1px;
-  top:80px;
+  top: 80px;
   left: 50%;
   height: 260px;
   background-color: var(--title-color);
@@ -212,56 +209,53 @@ nav .container > a {
   color: var(--primary-color);
 }
 
-.our-timeline .box .text{
+.our-timeline .box .text {
   width: 40%;
-      box-shadow: -4px 7px 6px 1px #eee, inset -4px 10px 6px 1px #eee;
+  box-shadow: -4px 7px 6px 1px #eee, inset -4px 10px 6px 1px #eee;
 }
-.our-timeline .box .text p{
+.our-timeline .box .text p {
   color: var(--p-color);
 }
-.our-timeline .box .date{
+.our-timeline .box .date {
   width: 40%;
 }
-@media(max-width:992px){
-  .our-timeline .box .text{
+@media (max-width: 992px) {
+  .our-timeline .box .text {
     width: 80%;
   }
-  .our-timeline .box .date{
-  display: none;
+  .our-timeline .box .date {
+    display: none;
   }
-
 }
 /*end  Our Timeline  */
 /*start  Our  Patients  */
 
-.carousel .carousel-item .avatar img{
+.carousel .carousel-item .avatar img {
   width: 100px;
 }
 /*end  Our  Patients */
 
 /*start  booking  */
-.booking .container form div input{
+.booking .container form div input {
   height: 60px;
   font-size: 20px;
-} 
-.booking .container .btn{
-  transition: 0.5s;
-
 }
-.booking .container .btn:hover{
+.booking .container .btn {
+  transition: 0.5s;
+}
+.booking .container .btn:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 /*end  booking */
 /*start  footer */
-.footer{
+.footer {
   background-color: var(--section-bg-color);
 }
-.footer .contact-box .box .social i{
+.footer .contact-box .box .social i {
   transition: 0.3s;
-
 }
-.footer .contact-box .box .social i:hover{
+.footer .contact-box .box .social i:hover {
   color: var(--primary-color);
 }
 /*end  footer */
