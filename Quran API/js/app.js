@@ -8,17 +8,16 @@ let canvas = document.querySelector(".offcanvas");
 
 gitSura();
 function gitSura() {
-  fetch("http://api.alquran.cloud/v1/quran/ar.alafasy")
+  fetch("https://api.quran.gading.dev/surah/")
     .then((q) => q.json())
     .then((data) => {
-      // console.log(data.data.surahs);
-      for (let surahs in data.data.surahs) {
-        let sur = data.data.surahs[surahs];
+      for (let surah in data.data) {
+        let sur = data.data[surah];
         bodySoura.innerHTML += `
                     <div class="soura-box">
-              <span class="aya-name">${sur.name}</span>
-              <p class="aya-englishName"> ${sur.englishName}</p>
-              <span class="aya-num">(${+surahs + 1})</span>
+              <span class="aya-name">${sur.name.long}</span>
+              <p class="aya-englishName"> ${sur.name.transliteration.en}</p>
+              <span class="aya-num">(${+surah + 1})</span>
             </div>
         `;
       }
@@ -28,17 +27,17 @@ function gitSura() {
       let AyahsText;
       allSurahs.forEach((sura, index) => {
         sura.addEventListener("click", () => {
-          fetch(`http://api.alquran.cloud/v1/surah/${+index + 1}/ar.alafasy`)
+          fetch(`https://api.quran.gading.dev/surah/${index+1}`)
             .then((response) => response.json())
             .then((data) => {
               ayahBox.innerHTML = `
-                        <p>${data.data.name}</p>
+                        <p>${data.data.name.long}</p>
               `;
               AyahsAdios = [];
               AyahsText = [];
-              for (let aya in data.data.ayahs) {
-                AyahsText.push(data.data.ayahs[aya].text);
-                AyahsAdios.push(data.data.ayahs[aya].audio);
+              for (let aya in data.data.verses) {
+                AyahsText.push(data.data.verses[aya].text.arab);
+                AyahsAdios.push(data.data.verses[aya].audio.primary);
                 ayahBox.innerHTML += `
                             <span class="aya" id="${aya}">${
                   AyahsText[aya]
