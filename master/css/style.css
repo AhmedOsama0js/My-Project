@@ -9,6 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: black;
 }
 
@@ -17,7 +18,7 @@ body {
   border-radius: 8px;
   box-shadow: -5px -5px 10px #cccccc52;
   margin-top: 40px;
-  padding: 60px;
+  padding: 20px 60px;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

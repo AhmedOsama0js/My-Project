@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Tech Modern Language",
+        "Hyperlink and Text Manipulation Language",
+        "Home Tool Markup Language"
+      ],
+      "correctAnswer": "Hyper Text Markup Language"
+    },
+    {
+      "question": "Which HTML element is used to define the structure of an HTML document?",
+      "options": [
+        "<structure>",
+        "<body>",
+        "<html>",
+        "<format>"
+      ],
+      "correctAnswer": "<html>"
+    },
+    {
+      "question": "What is the correct HTML tag for creating an unordered list?",
+      "options": [
+        "<ol>",
+        "<dl>",
+        "<ul>",
+        "<li>"
+      ],
+      "correctAnswer": "<ul>"
+    },
+    {
+      "question": "Which HTML element is used for creating hyperlinks?",
+      "options": [
+        "<link>",
+        "<a>",
+        "<hlink>",
+        "<url>"
+      ],
+      "correctAnswer": "<a>"
+    },
+    {
+      "question": "What is the purpose of the HTML <head> element?",
+      "options": [
+        "To define the main content of the web page.",
+        "To define the header section of the web page.",
+        "To specify the metadata of the web page.",
+        "To create a hyperlink."
+      ],
+      "correctAnswer": "To specify the metadata of the web page."
+    },
+    {
+      "question": "Which HTML tag is used to insert a line break within a paragraph?",
+      "options": [
+        "<br>",
+        "<lb>",
+        "<newline>",
+        "<break>"
+      ],
+      "correctAnswer": "<br>"
+    },
+    {
+      "question": "Which attribute is used to specify the alternative text for an image in HTML?",
+      "options": [
+        "alt",
+        "title",
+        "image-text",
+        "description"
+      ],
+      "correctAnswer": "alt"
+    },
+    {
+      "question": "What is the purpose of the HTML <form> element?",
+      "options": [
+        "To create a table.",
+        "To define a section of the web page.",
+        "To create a navigation menu.",
+        "To create a user input form."
+      ],
+      "correctAnswer": "To create a user input form."
+    },
+    {
+      "question": "Which HTML tag is used to define a table row?",
+      "options": [
+        "<tr>",
+        "<td>",
+        "<th>",
+        "<table-row>"
+      ],
+      "correctAnswer": "<tr>"
+    },
+    {
+      "question": "In HTML, which tag is used to create a clickable button?",
+      "options": [
+        "<button>",
+        "<input type=\"button\">",
+        "<clickable>",
+        "<link>"
+      ],
+      "correctAnswer": "<input type=\"button\">"
+    }
+  ]
+}
