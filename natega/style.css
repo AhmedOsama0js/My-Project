@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&family=Tajawal:wght@300;500;700;800&display=swap");
+body {
+  font-family: "Scheherazade New", serif;
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(40, 46, 44);
+  height: 100vh;
+}
+
+.container{
+    display: flex;
+  align-items: center;
+  background-color: rgb(240, 255, 255);
+  flex-direction: column;
+  height: auto;
+  overflow-y: scroll;
+  border-radius: 10px;
+
+}
+.box-data{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.box-table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.box-chart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.char-active {
+  width: 100%;
+}
+
+@keyframes tableUpdateAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -46,7 +46,7 @@
     "id":7,
     "title": "filter app",
     "img": "./master/images/filter.jpg",
-    "a": "./filter app✔/filter.html",
+    "a": "./filter app/filter.html",
     "target" : "App"
   },
   {
@@ -103,6 +103,13 @@
     "title": "quiz App",
     "img": "./master/images/quiz App.jpg",
     "a": "./Quiz App/index.html",
+    "target" : "App"
+  },
+  {
+    "id":16,
+    "title": "natega ",
+    "img": "./master/images/natega.jpg",
+    "a": "./natega/index.html",
     "target" : "App"
   }
   ]

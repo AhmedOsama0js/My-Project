@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #7979796e;
+
 }
 body::before,
 body::after {
@@ -76,50 +77,24 @@ body::after {
   overflow: hidden;
 }
 
-.box .img {
+.box img {
   border-radius: 8px;
   margin-bottom: 30px;
 }
 
-.box .img :hover {
+ .box  img:hover {
   transition: 0.7s;
   transform: scale(1.2);
 }
 @media (max-width: 776px) {
-  .box .img :hover {
+  .box img:hover {
     transform: scale(1.1);
   }
 }
 
-.box .img img {
+.box img {
   width: 100%;
   border-radius: 8px;
-}
-
-.box .info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.box .info button {
-  padding: 5px;
-  margin: 15px;
-  border-radius: 5px;
-}
-
-.box .info button:hover {
-  background-color: rgb(15, 72, 80);
-  border: 2px solid #eee;
-}
-
-.box .info button:hover a {
-  color: white;
-}
-.box .info a {
-  color: black;
-  text-decoration: none;
-  padding: 10px;
 }
 
 @keyframes up-down {
