@@ -111,6 +111,13 @@
     "img": "./master/images/natega.jpg",
     "a": "./natega/index.html",
     "target" : "App"
+  },
+  {
+    "id":17,
+    "title": "Snake Game ",
+    "img": "./master/images/snake-game.jpg",
+    "a": "./snake game/index.html",
+    "target" : "game"
   }
   ]
 }

@@ -1,0 +1,4 @@
+1-- add score
+2-- add button to control
+3-- style 
+4-- sava big scour from local stor

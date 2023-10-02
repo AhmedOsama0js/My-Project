@@ -1,0 +1,112 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  
+  background: linear-gradient(to right, #012335, #012346 );
+  height: 100vh ;
+  width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+@media(min-width:767px){
+body {
+  align-items: center;
+}
+}
+.game-container{
+  background:linear-gradient(to left, #4c5048, #2e3f38);
+  width: 100vmin;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(21,1fr);
+  grid-template-rows: repeat(21,1fr);
+  border:  10px dashed #862121;
+
+}
+@media(max-width:767px){
+.game-container {
+  height: 85vh;
+}
+}
+
+.snake{
+  border-radius: 3px;
+  box-shadow: -4px 6px 13px 0px #020202;
+  border: 1px solid black;
+}
+.snake:first-child{
+  border-radius: 6px;
+}
+
+.snake:nth-child(odd){
+  background:linear-gradient(to right, #215458,#337c81)
+}
+.snake:nth-child(even){
+  background:linear-gradient(to left, #215458,#337c81)
+  
+}
+
+.food{
+  border-radius: 50%;
+  border: 1px solid black;
+  background:linear-gradient(to right , #862121,  #f14f4f) ;
+  box-shadow: -4px 6px 13px 0px #020202;
+}
+
+.secor{
+  background-color: rgba(240, 248, 255, 0.281);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.big-secor{
+    background-color: rgba(240, 248, 255, 0.281);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+
+.btn-group {
+
+  display: none;
+  
+}
+
+@media(max-width:767px){
+.btn-group {
+  display: grid;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* تقسيم العرض إلى عمودين متساويين */
+  grid-template-rows: repeat(2, 1fr); /* تقسيم الارتفاع إلى صفين متساويين */
+  gap: 10px; /* تباعد بين العناصر */
+}
+}
+.btn-dirction {
+  padding: 10px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-dirction:first-child,
+.btn-dirction:last-child{
+  width: 50%;
+  margin-left:25%;
+  grid-column: 1 / -1;
+}
+
