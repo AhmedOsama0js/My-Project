@@ -80,15 +80,14 @@ body {
 
 
 .btn-group {
-
   display: none;
-  
 }
 
 @media(max-width:767px){
 .btn-group {
   display: grid;
     display: grid;
+    margin-bottom: 30px;
   grid-template-columns: repeat(2, 1fr); /* تقسيم العرض إلى عمودين متساويين */
   grid-template-rows: repeat(2, 1fr); /* تقسيم الارتفاع إلى صفين متساويين */
   gap: 10px; /* تباعد بين العناصر */
