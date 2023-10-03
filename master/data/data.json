@@ -118,6 +118,13 @@
     "img": "./master/images/snake-game.jpg",
     "a": "./snake game/index.html",
     "target" : "game"
+  },
+  {
+    "id":18,
+    "title": "Dash board",
+    "img": "./master/images/dashbord2.jpg",
+    "a": "./dashboard-2/index.html",
+    "target" : "Dashboard"
   }
   ]
 }

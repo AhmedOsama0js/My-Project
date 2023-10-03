@@ -1,0 +1,1 @@
+new DataTable("#data-table");

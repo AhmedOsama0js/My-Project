@@ -28,27 +28,27 @@ let a = window.addEventListener("keydown", (e) => {
 export function directions(arr) {
   arr.map((e) => {
     e.addEventListener("click", () => {
-        switch (e.title) {
-          case "up":
-            if (lastInputDirection.y !== 0) break;
-            inputDirection = { x: 0, y: 1 };
-            break;
-          case "down":
-            if (lastInputDirection.y !== 0) break;
-            inputDirection = { x: 0, y: -1 };
-            break;
-          case "left":
-            if (lastInputDirection.x !== 0) break;
-            inputDirection = { x: -1, y: 0 };
-            break;
-          case "right":
-            if (lastInputDirection.x !== 0) break;
-            inputDirection = { x: 1, y: 0 };
-            break;
+      switch (e.title) {
+        case "up":
+          if (lastInputDirection.y !== 0) break;
+          inputDirection = { x: 0, y: 1 };
+          break;
+        case "down":
+          if (lastInputDirection.y !== 0) break;
+          inputDirection = { x: 0, y: -1 };
+          break;
+        case "left":
+          if (lastInputDirection.x !== 0) break;
+          inputDirection = { x: -1, y: 0 };
+          break;
+        case "right":
+          if (lastInputDirection.x !== 0) break;
+          inputDirection = { x: 1, y: 0 };
+          break;
 
-          default:
-            break;
-        }
+        default:
+          break;
+      }
     });
   });
 }
