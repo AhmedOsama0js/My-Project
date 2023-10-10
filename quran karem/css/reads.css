@@ -1,0 +1,82 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;600;800&display=swap');
+
+body{
+font-family: 'Vazirmatn', sans-serif;
+}
+body::before{
+  animation: none;
+}
+body::after{
+  animation: none;
+}
+
+.container-quraa{
+    display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+}
+.souras-container{
+padding-bottom: 60px;
+}
+.container-Ayah {
+  padding:20px ;
+  direction: rtl;
+  display: flex;
+ justify-content: center;
+ gap: 20px;
+  text-align: center;
+  /* text-align-last: justify; */
+}
+
+
+.container-Ayah .content {
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  overflow-y: scroll;
+  transition: 1s; 
+  line-height: 2;
+  padding: 10px;
+
+}
+
+.container-Ayah .content .aya{
+  font-size: 20px;
+}
+@media(max-width:768px){
+   .container-Ayah .content .aya{
+  font-size: 15px;
+}
+}
+.container-Ayah .content .num{
+  margin: 0 10px;
+  font-size: 22px;
+  color: rgb(103, 75, 194);
+}
+.container-Ayah .content .aya{
+ transition: 0.5s;
+}
+
+.container-Ayah .content .aya.active{
+  background:linear-gradient(to bottom, rgb(22, 22, 94),rgb(54, 43, 153));
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+#loadingSpinner {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translateX(-50%);
+  animation: rotate 2s linear infinite;
+  height: 100px;
+  width: 100px;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

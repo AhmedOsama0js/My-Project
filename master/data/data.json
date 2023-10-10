@@ -125,6 +125,13 @@
     "img": "./master/images/dashbord2.jpg",
     "a": "./dashboard-2/index.html",
     "target" : "Dashboard"
+  },
+  {
+    "id":19,
+    "title": "Quran Karem",
+    "img": "./master/images/quran karem.jpg",
+    "a": "./quran karem/astmaa.html",
+    "target" : "Quran Karem"
   }
   ]
 }

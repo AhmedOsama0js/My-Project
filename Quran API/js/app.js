@@ -31,7 +31,8 @@ function gitSura() {
             .then((response) => response.json())
             .then((data) => {
               ayahBox.innerHTML = `
-                        <p>${data.data.name.long}</p>
+                      <p>${data.data.name.long}</p>
+                      
               `;
               AyahsAdios = [];
               AyahsText = [];

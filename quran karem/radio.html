@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normaliz.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/live.css">
+  <title>راديو</title>
+</head>
+<body>
+  <div class="main-container">
+  <div class="data-container row ">
+            <a class="developer" href="https://ahmedosama0js.github.io/My-Project/personal%20page/index.html">Ahmed Osama</a>
+    <nav class="sidebar-left col-2 col-md-1">
+      <div class="w-100">
+        <div class="w-100 astmaa"><a title="astmaa"  href="astmaa.html"><i class="fa-solid fa-headphones"></i></a></div>
+        <div class="w-100 qraa"><a  title="qraa" href="reads.html"><i class="fa-brands fa-readme"></i></a></div>
+        <div class="w-100 live"><a class="active" title="radio.html" href="live.html"><i class="fa-solid fa-radio"></i></a></div>
+        <div class="w-100 live"><a  title="TV.html" href="TV.html"><i class="fa-solid fa-tv"></i></a></div>
+      </div>
+    </nav>
+    <div class="container-radio  col-6  col-md-8">
+  <div class="content">
+    <div class="icon">
+      <i class="fa-solid fa-radio"></i>
+    </div>
+  </div>
+    </div>
+    <nav class="sidebar-right  col-4 col-md-3">
+      <img class="play-list-img" src="./data/img/shaikh-Mahmoud-Khalil-Al-Hosary.webP" alt="shatery">
+      <h4 class="name-player-list text-center"> إذاعة محمود خليل الحصري</h4>
+      <div class="radio-container">
+      </div>
+    </nav>
+      <div class="audio row">
+        <div class="avatar col-2">
+          <span><img src="./data/img/shaikh-Mahmoud-Khalil-Al-Hosary.webP"  class="rounded-circle bg-primary" alt=""></span>
+          <span class="avatar-name"> </span>
+        </div>
+        <div class="timeLine col-7">
+         <div class="linePlay">
+          <!-- <div class="time">
+            <span class="total-time">00:00</span>
+            <span class="slash">/</span>
+            <span class="current-time">00:00</span>
+          </div> -->
+          <!-- <div class="line"></div> -->
+            <!-- <span class="thumb"></span> -->
+          </div>
+          <div class="controles">
+            <!-- <button id="back" title="backward" type="button" class="backward"><i class="fa-solid fa-backward-step"></i></button> -->
+            <button id="player" title="player" type="button" class="play"><i class="fa-solid fa-play"></i></button>
+            <!-- <button id="next" title="forward" type="button" class="forward"><i class="fa-solid fa-forward-step"></i></button> -->
+          </div>
+        </div>
+      <div class="VolumControule col-2" data-volume="hight">
+          <button class="btn-container"  title="button-value" >
+          <i class="fa-solid fa-volume-high volume-high"></i>
+          <i class="fa-solid fa-volume-low volume-middle"></i>
+          <i class="fa-solid fa-volume-off volume-low"></i>
+          <i class="fa-solid fa-volume-mute volume-mute"></i>
+        </button>
+      <input title="volume-rang" type="range" min="0" max="1" value="1" step="any" class="form-range volume-range " id="customRangeVolume">
+      
+      </div>
+      <audio src="" ></audio>
+
+    </div>
+  </div>
+</div>
+<script src="js/bootstrap.js"></script>
+<script src="js/radio.js"></script>
+</body>
+</html>

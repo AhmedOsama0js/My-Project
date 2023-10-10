@@ -19,7 +19,6 @@ getData();
 
 
 function getCards(d, Filter) {
-  
   container.innerHTML = "";
   for (let i = 0; i < d.length; i++) {
     if (Filter === "All" || d[i].target === Filter) {

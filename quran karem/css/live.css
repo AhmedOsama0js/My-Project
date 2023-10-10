@@ -1,0 +1,137 @@
+.radio-container {
+  height: 500px;
+  overflow-y: scroll;
+  width: 100%;
+  padding-bottom: 60px;
+}
+.radio-container .qarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  gap: 5px;
+  width: 100%;
+  border-bottom: 1px solid #3924ad;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.radio-container .qarea.active {
+  background: linear-gradient(to left, #190c64ce, #3924ad00);
+}
+.radio-container img {
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #190c64, #3319c7);
+}
+
+.container-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-radio .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  /* background-color: red; */
+  border-radius: 50%;
+}
+.container-radio::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 0;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  animation: before 1s linear infinite;
+}
+.container-radio::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 0;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  animation: before 2s linear infinite;
+}
+.container-radio i {
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: rotate 4s linear infinite ;
+}
+
+.container-radio .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+  animation: before 3s linear infinite;
+}
+.container-radio .icon::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+
+  animation: before 4s linear infinite;
+  border-radius: 50%;
+}
+
+@keyframes before {
+  0% {
+    width: 0;
+    height: 0;
+    border: 1px solid #4e34e0;
+  }
+ 40% {
+    width: 200px;
+    height: 0;
+    border: 1px solid #4e34e0;
+  }
+  80% {
+    width: 0;
+    height: 200px;
+    border: 1px solid #4e34e0;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgba(0, 128, 0, 0);
+  }
+}
+@keyframes rotate {
+  0% {
+   transform: rotate(0);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
