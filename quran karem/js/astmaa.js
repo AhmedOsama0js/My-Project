@@ -76,7 +76,7 @@ const clickSouraName = () => {
       });
       s.target.classList.add("active");
       souraTarget = s.target.id;
-      getlink();
+      getLink();
       audio.play();
       togglePaly();
     });
@@ -124,7 +124,7 @@ const getQareaToTarget = (d) => {
       avatarImg.src = target.img;
       avatarNama.textContent = target.name;
       nameQareaa.textContent = target.name;
-      getlink();
+      getLink();
       audio.play();
       togglePaly();
       addActiveFromSoura(+souraTarget);
@@ -143,14 +143,14 @@ btnRepeat.addEventListener("click", () => {
 
 audio.addEventListener("ended", () => {
   if (repeat) {
-    getlink();
+    getLink();
     audio.play();
   } else {
     if (+souraTarget >= 114) {
       return;
     } else {
       +souraTarget++;
-      getlink();
+      getLink();
       addActiveFromSoura(+souraTarget);
       togglePaly();
       audio.play();
@@ -158,7 +158,7 @@ audio.addEventListener("ended", () => {
   }
 });
 
-getlink = () => {
+getLink = () => {
   if (`${souraTarget}`.length == 1) {
     souraTarget = `00${souraTarget}`;
   } else if (`${souraTarget}`.length == 2) {
@@ -169,7 +169,7 @@ getlink = () => {
   link = `${qareaTarget}${souraTarget}.mp3`;
   audio.src = link;
 };
-getlink();
+getLink();
 
 playPause.addEventListener("click", togglePaly);
 
@@ -295,7 +295,7 @@ function changNextSoura() {
     return;
   } else {
     +souraTarget++;
-    getlink();
+    getLink();
     addActiveFromSoura(+souraTarget);
   }
 }
@@ -305,7 +305,7 @@ function changPrevSoura() {
     return;
   } else {
     +souraTarget--;
-    getlink();
+    getLink();
     addActiveFromSoura(+souraTarget);
   }
 }

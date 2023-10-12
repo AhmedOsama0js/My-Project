@@ -194,7 +194,13 @@ header .btn-group{
   transform:scale(1.1)
 }
 .container-quraa .content .qareaa .img-qarea img {
-  width: 80%;
+  width: 150px;
+}
+
+@media(max-width:768px){
+  .container-quraa .content .qareaa .img-qarea img {
+  width: 70px;
+}
 }
 .container-quraa .content .qareaa .text {
   text-align: center;
