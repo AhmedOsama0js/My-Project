@@ -1,5 +1,3 @@
-
-
 let containerSoura = document.querySelector(".souras-container");
 
 let containerQuraa = document.querySelector(".container-quraa .content");
@@ -26,20 +24,21 @@ let thumb = document.querySelector(".thumb");
 
 let currentTime = document.querySelector(".current-time");
 
-let avatarImg = document.querySelector(".audio .avatar img")
+let avatarImg = document.querySelector(".audio .avatar img");
 
 let avatarNama = document.querySelector(".avatar-name");
 
-let btnBack = document.querySelector("#back")
+let btnBack = document.querySelector("#back");
 
-let btnNext = document.querySelector("#next")
+let btnNext = document.querySelector("#next");
 
-
+let btnRepeat = document.querySelector("#repeat");
 
 let qareaTarget = "https://server11.mp3quran.net/shatri/";
 let souraTarget = `001`;
 
 let link = ``;
+let repeat = false;
 
 // get soura-name
 
@@ -117,14 +116,14 @@ const getQareaToTarget = (d) => {
   let quraa = document.querySelectorAll(".container-quraa .content .qareaa");
   quraa.forEach((e) => {
     e.addEventListener("click", (s) => {
-      addActiveFromSoura(s.target); 
+      addActiveFromSoura(s.target);
       let target = d[s.target.id - 1];
       qareaTarget = target.moshaf[0].server;
       imgQareaa.src = target.img;
       imgQareaa.classList.toggle("rotate");
-      avatarImg.src = target.img
-      avatarNama.textContent = target.name
-      nameQareaa.textContent = target.name
+      avatarImg.src = target.img;
+      avatarNama.textContent = target.name;
+      nameQareaa.textContent = target.name;
       getlink();
       audio.play();
       togglePaly();
@@ -132,6 +131,32 @@ const getQareaToTarget = (d) => {
     });
   });
 };
+
+btnRepeat.addEventListener("click", () => {
+  btnRepeat.classList.toggle("active");
+  if (btnRepeat.classList.contains("active")) {
+    repeat = true;
+  } else {
+    repeat = false;
+  }
+});
+
+audio.addEventListener("ended", () => {
+  if (repeat) {
+    getlink();
+    audio.play();
+  } else {
+    if (+souraTarget >= 114) {
+      return;
+    } else {
+      +souraTarget++;
+      getlink();
+      addActiveFromSoura(+souraTarget);
+      togglePaly();
+      audio.play();
+    }
+  }
+});
 
 getlink = () => {
   if (`${souraTarget}`.length == 1) {
@@ -162,7 +187,6 @@ function togglePaly() {
   }
 }
 
-
 btnCentralVolume.addEventListener("click", toggleMute);
 customRangeVolume.addEventListener("input", (e) => {
   audio.volume = e.target.value;
@@ -191,22 +215,17 @@ audio.addEventListener("volumechange", () => {
   VolumControule.dataset.volume = volumeLevel;
 });
 
-
 // time audio play
 
-
 audio.addEventListener("loadeddata", () => {
-  totalTime.textContent = formatDataTime(audio.duration)
-})
-
+  totalTime.textContent = formatDataTime(audio.duration);
+});
 
 audio.addEventListener("timeupdate", () => {
-
-  currentTime.textContent = formatDataTime(audio.currentTime)
+  currentTime.textContent = formatDataTime(audio.currentTime);
   let percent = audio.currentTime / audio.duration;
   timeLineContainer.style.setProperty("--preview-progress", percent);
-})
-
+});
 
 function formatDataTime(time) {
   let seconds = Math.floor(time % 60);
@@ -223,7 +242,6 @@ function formatDataTime(time) {
   }
 }
 
-
 // time line
 
 timeLineContainer.addEventListener("mouseover", handlerTimeLine);
@@ -239,25 +257,23 @@ document.addEventListener("mousemove", (e) => {
 let isScrubbing = false;
 let wasPaused;
 function toggleIsScrubbing(e) {
-    let rect = timeLineContainer.getBoundingClientRect();
-    let percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
+  let rect = timeLineContainer.getBoundingClientRect();
+  let percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
 
-  isScrubbing = (e.buttons & 1) == 1
-  
+  isScrubbing = (e.buttons & 1) == 1;
+
   timeLineContainer.classList.toggle("scrubbing", isScrubbing);
-  if (isScrubbing) { 
-    wasPaused = audio.paused
-    audio.pause()
+  if (isScrubbing) {
+    wasPaused = audio.paused;
+    audio.pause();
   } else {
     if (!wasPaused) {
-      audio.currentTime = percent * audio.duration
-      audio.play()
+      audio.currentTime = percent * audio.duration;
+      audio.play();
     }
   }
   handlerTimeLine(e);
 }
-
-
 
 function handlerTimeLine(e) {
   let rect = timeLineContainer.getBoundingClientRect();
@@ -265,46 +281,43 @@ function handlerTimeLine(e) {
   timeLineContainer.style.setProperty("--progress-position", percent);
 
   if (isScrubbing) {
-    e.preventDefault()
+    e.preventDefault();
     timeLineContainer.style.setProperty("--preview-progress", percent);
   }
 }
-
 
 // next And Prev btn
 btnNext.addEventListener("click", changNextSoura);
 btnBack.addEventListener("click", changPrevSoura);
 
 function changNextSoura() {
- if (+souraTarget >= 114) {
-   return;
- } else {
-  +souraTarget ++
-   getlink();
-   addActiveFromSoura(+souraTarget); 
+  if (+souraTarget >= 114) {
+    return;
+  } else {
+    +souraTarget++;
+    getlink();
+    addActiveFromSoura(+souraTarget);
   }
 }
 
 function changPrevSoura() {
-  if (+souraTarget<= 1 ){
+  if (+souraTarget <= 1) {
     return;
   } else {
     +souraTarget--;
     getlink();
-  addActiveFromSoura(+souraTarget); 
+    addActiveFromSoura(+souraTarget);
   }
 }
 
 // add Active soura
 
 function addActiveFromSoura(num) {
-      let souraName = document.querySelectorAll(".souras-container .soura");
-      souraName.forEach((e) => {
-        e.classList.remove("active");
-        if (e.id == num) {
-          e.classList.add("active");
-        }
-      });
+  let souraName = document.querySelectorAll(".souras-container .soura");
+  souraName.forEach((e) => {
+    e.classList.remove("active");
+    if (e.id == num) {
+      e.classList.add("active");
+    }
+  });
 }
-
-

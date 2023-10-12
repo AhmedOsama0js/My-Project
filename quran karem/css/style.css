@@ -384,6 +384,7 @@ header .btn-group{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: relative;
 }
 .audio .timeLine .controles button{
   width: 40px;
@@ -398,6 +399,17 @@ header .btn-group{
   /* background-color: red; */
   color: white;
 }
+
+.audio .timeLine .controles #repeat{
+  position: absolute;
+  right:-25px;
+}
+
+.audio .timeLine .controles #repeat.active{
+  color: #2717bd;
+  text-shadow: 0 0 10px rgba(58, 47, 156, 0.929)
+}
+
 .audio .VolumControule .volume-low,
 .audio .VolumControule .volume-middle,
 .audio .VolumControule .volume-high,
