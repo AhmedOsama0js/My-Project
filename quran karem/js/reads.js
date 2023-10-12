@@ -11,6 +11,9 @@ let thumb = document.querySelector(".thumb");
 let btnBack = document.querySelector("#back");
 let btnNext = document.querySelector("#next");
 
+let btnRepeat = document.querySelector("#repeat");
+let repeat = false;
+
 let currentTime = document.querySelector(".current-time");
 
 let souraTarget = 1;
@@ -116,15 +119,29 @@ const printAyah = (d) => {
   clickAya(ayas);
 };
 
+btnRepeat.addEventListener("click", () => {
+  btnRepeat.classList.toggle("active");
+  if (btnRepeat.classList.contains("active")) {
+    repeat = true;
+  } else {
+    repeat = false;
+  }
+});
+
 audio.addEventListener("ended", () => {
-  ayaIndex++;
-  if (AyahsAdios.length > ayaIndex) {
+  if (repeat) {
+    changeAyah(ayaIndex);
+    scrollToArticle(ayaIndex);
+  } else {
+    if (AyahsAdios.length > ayaIndex) {
+    ayaIndex++;
     changeAyah(ayaIndex);
     scrollToArticle(ayaIndex);
   } else {
     audio.pause();
     ayaIndex = 0;
   }
+}
 });
 
 // audio src changed
