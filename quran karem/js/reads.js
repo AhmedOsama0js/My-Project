@@ -97,7 +97,7 @@ const getAyas = async (num) => {
   }
 };
 
-// parent ayah
+
 
 const printAyah = (d) => {
   AyahsAdios = [];
@@ -119,6 +119,7 @@ const printAyah = (d) => {
   clickAya(ayas);
 };
 
+
 btnRepeat.addEventListener("click", () => {
   btnRepeat.classList.toggle("active");
   if (btnRepeat.classList.contains("active")) {
@@ -127,6 +128,7 @@ btnRepeat.addEventListener("click", () => {
     repeat = false;
   }
 });
+
 
 audio.addEventListener("ended", () => {
   if (repeat) {
