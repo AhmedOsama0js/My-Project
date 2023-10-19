@@ -131,7 +131,21 @@
     "title": "Quran Karem",
     "img": "./master/images/quran karem.jpg",
     "a": "./quran karem/astmaa.html",
-    "target" : "Quran Karem"
+    "target" : "App"
+  },
+  {
+    "id":20,
+    "title": "Notes React App",
+    "img": "./master/images/notes.jpg",
+    "a": "https://ahmedosama0js.github.io/note/",
+    "target" : "React_Project"
+  },
+  {
+    "id":20,
+    "title": "millionaire Game",
+    "img": "./master/images/millionaire.jpg",
+    "a": "https://ahmedosama0js.github.io/millionaireGame/",
+    "target" : "React_Project"
   }
   ]
 }
