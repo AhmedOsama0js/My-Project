@@ -146,6 +146,13 @@
     "img": "./master/images/millionaire.jpg",
     "a": "https://ahmedosama0js.github.io/millionaireGame/",
     "target" : "React_Project"
+  },
+  {
+    "id":21,
+    "title": "react-dashboard",
+    "img": "./master/images/react-dashboard.jpg",
+    "a": "https://ahmedosama0js.github.io/React-Dashboard-1/",
+    "target" : "React_Project"
   }
   ]
 }
