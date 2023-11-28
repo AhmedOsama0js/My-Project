@@ -2,21 +2,23 @@
  ### 19 projects are collected in this repository, each of which includes HTML, CSS and JS technologies.
 
 
-## 18-Dashboard Two
-The Dashboard Is Comprised Of Four Pages. The Initial Page Exhibits Graphs And Tables, While The Second Features A Calendar Enabling Users To Add Appointments And Essential Events Throughout The Month. On The Third Page, A Todo App Is Presented, Offering Functionalities Like Adding, Deleting, And Rearranging Important Tasks. Finally, The Fourth Page Showcases A Table Containing Customer Information.
-#### Demo :[Dashboard Two](https://ahmedosama0js.github.io/My-Project/dashboard-2/index.html)
-
-<img src="master/images/quran karem.jpg" width="200"> 
-
-###### -------------------------------------------
 
 ## 19-Quran Karem
 The Holy Qur'an Application Is A Robust And Feature-Rich Platform Crafted Using HTML, CSS, And JS Complemented By A 4-Page Structure. The Initial Page Encompasses The Entire Holy Qur'an, Featuring The Voices Of 46 Reciters. It Includes An Engaging Audio Player With Controls For Adjusting Volume, Advancing, Or Delaying The Recitation. The Second Page Provides The Text Of The Qur'an, Allowing Users To Click On Any Verse For Reading. On The Third Page, There Is A Live Radio Broadcast Featuring Recitations From Various Sheikhs. The Fourth Page Offers A Live Stream Of The Holy Qur'an Channel.
 #### Demo :[Quran Karem](https://ahmedosama0js.github.io/My-Project/quran%20karem/astmaa.html)
 
+<img src="master/images/quran karem.jpg" width="200"> 
+
+###### -------------------------------------------
+
+## 18-Dashboard Two
+The Dashboard Is Comprised Of Four Pages. The Initial Page Exhibits Graphs And Tables, While The Second Features A Calendar Enabling Users To Add Appointments And Essential Events Throughout The Month. On The Third Page, A Todo App Is Presented, Offering Functionalities Like Adding, Deleting, And Rearranging Important Tasks. Finally, The Fourth Page Showcases A Table Containing Customer Information.
+#### Demo :[Dashboard Two](https://ahmedosama0js.github.io/My-Project/dashboard-2/index.html)
+
 <img src="master/images/dashbord2.jpg" width="200"> 
 
 ###### -------------------------------------------
+
 
 
 ## 17-Snake Game
@@ -158,4 +160,3 @@ Using HTML And CSS, I Have Created A Page Consisting Of Five Sections: [Services
 <img src="master/images/templet-1.jpg" width="200"> 
 
 
-###### -------------------------------------------
