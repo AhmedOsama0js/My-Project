@@ -43,6 +43,7 @@ fetch("./data/radio.json")
       .querySelectorAll(".radio-container .qarea")[0]
       .classList.add("active");
     audio.src = src;
+
     clickQarea(data.radios);
   });
 
@@ -61,6 +62,7 @@ const clickQarea = (d) => {
       imgQareaa.src = d[QareaAudio].img;
       imgQareaa.classList.toggle("rotate");
       avatarImg.src = d[QareaAudio].img;
+      nameQareaa.innerHTML = d[QareaAudio].name;
       audio.play();
       cheek();
     });

@@ -191,7 +191,7 @@ function scrollToArticle(ayaIndex) {
   }
 }
 
-// ظظظظ
+
 
 // toggle play
 
